@@ -55,13 +55,15 @@
                                 cnt+=1;
                                 var row = "Name: "+data["name"]+"; Addr: "+data["address"]
                                             +"; Pincode: "+data["pincode"]+"; Age Limit: "+data["min_age_limit"]
-                                            +"; Vaccine: "+data["vaccine"]+"; Availability: "+data["available_capacity"];
+                                            +"; Vaccine: "+data["vaccine"]+"; Availability: "+data["available_capacity"]
+                                            +"; Dose1: "+data["available_capacity_dose1"]+"; Dose2: "+data["available_capacity_dose2"]
+                                            +"; Fees: "+data["fee"];
 
-                                rows = rows + row + "<br/>";
+                                rows = rows + row + "<br/><hr/>";
                             }
                         
                         });
-                        console.log(cnt);
+                        //console.log(cnt);
                         if(cnt == 0) {
                             $("#message").html("No Available Slots");
                             $("#cowinportal").hide();
